@@ -27,7 +27,7 @@ LAYOUT = (u"ESKISTRFÜNFE" #0-12 extra "u" before each line with Extended Unicod
 
 # Map instructions:
 # The clock works by rounding the time to the nearest 5 minutes.
-# This means that you need to have settngs for each five minute interval "m00"
+# This means that you need to have settings for each five minute interval "m00"
 # "m00", "m05".
 # The clock also works on a 12 hour basis rather than 24 hour:
 # "h00", "h01" etc.
