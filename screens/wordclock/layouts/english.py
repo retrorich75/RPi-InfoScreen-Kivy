@@ -13,14 +13,14 @@
 '''
 
 # Layout is a single string variable which will be looped over by the parser.
-LAYOUT = ("ITQISHCUBMWLRPI"
-          "AOQUARTERFDHALF"
-          "TWENTYSFIVEGTEN"
-          "TOXPASTNYTWELVE"
-          "ONESIXTHREENINE"
-          "SEVENTWOXELEVEN"
-          "EIGHTENFOURFIVE"
-          "RPIO'CLOCKHAMPM")
+LAYOUT = ("ITQISHCUBMWLRPI" #0-14
+          "AOQUARTERFDHALF" #15-29
+          "TWENTYSFIVEGTEN" #30-44
+          "TOXPASTNYTWELVE" #45-59
+          "ONESIXTHREENINE" #60-74
+          "SEVENTWOXELEVEN" #75-89
+          "EIGHTENFOURFIVE" #90-104
+          "RPIO'CLOCKHAMPM") #105-119
 
 # Map instructions:
 # The clock works by rounding the time to the nearest 5 minutes.
@@ -33,33 +33,33 @@ LAYOUT = ("ITQISHCUBMWLRPI"
 #   "am":  Wording/symbol to indicate morning.
 #   "pm":  Wording/symbol to indicate afternoon/evening
 MAP = {
-       "all": [0, 1, 3, 4],
-       "m00": [108, 109, 110, 111, 112, 113, 114],
-       "m05": [37,38, 39, 40, 48, 49, 50, 51],
-       "m10": [42, 43, 44, 48, 49, 50, 51],
-       "m15": [15, 17, 18, 19, 20, 21, 22, 23, 48, 49, 50, 51],
-       "m20": [30, 31, 32, 33, 34, 35, 48, 49, 50, 51],
-       "m25": [30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 48, 49, 50, 51],
-       "m30": [26, 27, 28, 29, 48, 49, 50, 51],
-       "m35": [30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 45, 46],
-       "m40": [30, 31, 32, 33, 34, 35, 45, 46],
-       "m45": [15, 17, 18, 19, 20, 21, 22, 23, 45, 46],
-       "m50": [42, 43, 44, 45, 46],
-       "m55": [37, 38, 39, 40, 45, 46],
-       "h01": [60, 61, 62],
-       "h02": [80, 81, 82],
-       "h03": [66, 67, 68, 69, 70],
-       "h04": [97, 98, 99, 100],
-       "h05": [101, 102, 103, 104],
-       "h06": [63, 64, 65],
-       "h07": [75, 76, 77, 78, 79],
-       "h08": [90, 91, 92, 93, 94],
-       "h09": [71, 72, 73, 74],
-       "h10": [94, 95, 96],
-       "h11": [84, 85, 86, 87, 88, 89],
-       "h12": [54, 55, 56, 57, 58, 59],
-       "am": [116, 117],
-       "pm": [118, 119]
+       "all": [0, 1, 3, 4], #IT IS 
+       "m00": [108, 109, 110, 111, 112, 113, 114], #O'CLOCK
+       "m05": [37, 38, 39, 40, 48, 49, 50, 51], #FIVE PAST
+       "m10": [42, 43, 44, 48, 49, 50, 51], #TEN PAST
+       "m15": [15, 17, 18, 19, 20, 21, 22, 23, 48, 49, 50, 51], #QUARTER PAST
+       "m20": [30, 31, 32, 33, 34, 35, 48, 49, 50, 51], #TWENTY
+       "m25": [30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 48, 49, 50, 51],#TWENTY FIVE PAST
+       "m30": [26, 27, 28, 29, 48, 49, 50, 51], #HALF PAST
+       "m35": [30, 31, 32, 33, 34, 35, 37, 38, 39, 40, 45, 46], #TWENTY FIVE TO
+       "m40": [30, 31, 32, 33, 34, 35, 45, 46], #TWENTY TO
+       "m45": [15, 17, 18, 19, 20, 21, 22, 23, 45, 46], #QUARTER TO
+       "m50": [42, 43, 44, 45, 46], # TEN TO
+       "m55": [37, 38, 39, 40, 45, 46], #FIVE TO
+       "h01": [60, 61, 62], #ONE
+       "h02": [80, 81, 82], #TWO
+       "h03": [66, 67, 68, 69, 70], #THREE
+       "h04": [97, 98, 99, 100], #FOUR
+       "h05": [101, 102, 103, 104], #FIVE
+       "h06": [63, 64, 65], #SIX
+       "h07": [75, 76, 77, 78, 79], #SEVEN
+       "h08": [90, 91, 92, 93, 94], #EIGHT
+       "h09": [71, 72, 73, 74], #NINE
+       "h10": [94, 95, 96], # TEN
+       "h11": [84, 85, 86, 87, 88, 89], #ELEVEN
+       "h12": [54, 55, 56, 57, 58, 59], #TWELVE
+       "am": [116, 117], #AM
+       "pm": [118, 119] #PM
   }
 
 # Number of columns in grid layout
