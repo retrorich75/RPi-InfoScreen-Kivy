@@ -11,6 +11,8 @@
         SIZE:     The size of the individual box containing your letter.
                   Tuple in (x, y) format.
         FONTSIZE: Font size for the letter
+
+Used http://german.about.com/cs/onlinecourses/ht/httelltimeger.htm & http://www.babelnation.com/german/courses/01_05_1.html & http://arduino.joergeli.de/wordclock/wortfolie.pdf as references as I am a non-native German speaker.
 '''
 
 # Layout is a single string variable which will be looped over by the parser.
@@ -38,18 +40,18 @@ LAYOUT = (u"ESKISTRFÜNFE" #0-12 extra "u" before each line with Extended Unicod
 MAP = {
        "all": [0, 1, 3, 4, 5, 116, 117, 118], #ES IST
        "m00": [], #UHR
-       "m05": [71, 72, 73, 74, 41, 42, 43, 44],#FUNT NACH
+       "m05": [7, 8, 9, 10, 41, 42, 43, 44],#FUNT NACH
        "m10": [13, 14, 15, 16, 41, 42, 43, 44], #ZEHN NACH
        "m15": [29, 30, 31, 32, 33, 34, 35, 41, 42, 43, 44], #VIERTEL NACH
        "m20": [17, 18, 19, 20, 21, 22, 23, 41, 42, 43, 44], #ZWANZIG NACH
-       "m25": [],
-       "m30": [49, 50, 51, 52], #HALB
-       "m35": [],
-       "m40": [],
+       "m25": [71, 72, 73, 74, 38, 39, 40, 49, 50, 51, 52], #FÜNF VOR HALB
+       "m30": [49, 50, 51, 52], #HALB (HALF PAST THE NEXT HOUR)
+       "m35": [71, 72, 73, 74, 41, 42, 43, 44, 49, 50, 51, 52], #FÜNF NACH HALB
+       "m40": [17, 18, 19, 20, 21, 22, 23, 38, 39, 40], #ZWANZIG VOR
        "m45": [29, 30, 31, 32, 33, 34, 35, 38, 39, 40], #VIERTEL VOR
-       "m50": [38, 39, 40], #ZEHN VOR
+       "m50": [13, 14, 15, 16, 38, 39, 40], #ZEHN VOR
        "m55": [7, 8, 9, 10, 38, 39, 40], #FÜNF VOR
-       "h01": [60, 61, 62], #EIN(S) is not used for telling the time.
+       "h01": [60, 61, 62], #EIN (EINS) IS NOT USED FOR TELLING THE TIME)
        "h02": [67, 68, 69, 70], #ZWEI
        "h03": [66, 67, 68], #DREI
        "h04": [97, 98, 99, 100], #VIER
