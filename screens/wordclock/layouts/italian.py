@@ -14,16 +14,17 @@
 '''
 
 # Layout is a single string variable which will be looped over by the parser.
-LAYOUT = (u"ÈSONOL'LETPX" #0-12 extra "u" before each line with Extended Unicode character(s)
-          "XUNADUEDIECI" #12-23
-          "CINQUEYSETTE" #24-44
-          "TREZERPINOVE" #36-59
-          "OTTOTVNOVELN" #48-74
-          "DODOCIUNDICI" #60-89
-          "QUATTROSEIWE" #72-83
-          "MENOQUINDICI" #84-95
-          "DIECIBTRENTA" #96-107
-          "VENTIHCINQUE") #108-119
+# Extra "u" is required before each line with Extended Unicode character(s)
+LAYOUT = ("SONORLELBORE" #0-11 
+          u"ÈRL'UNAZDUEI" #12-23
+          "QTREOTTONOVE" #24-44
+          "DIECIRUNDICI" #36-59
+          "RDODOCISETTE" #48-74
+          "QUATTROCDSEI" #60-89
+          "UCINQUEAMENO" #72-83
+          "ECUNOQUARTOI" #84-95
+          "VENTIMCINQUE" #96-107
+          "PDIECIPMEZZA") #108-119
 
 # Map instructions:
 # The clock works by rounding the time to the nearest 5 minutes.
@@ -38,29 +39,29 @@ LAYOUT = (u"ÈSONOL'LETPX" #0-12 extra "u" before each line with Extended Unicod
 MAP = {
        "all": [], #
        "m00": [], #
-       "m05": [83, 114, 115, 116, 117, 118, 119], #CINQUE E
-       "m10": [83, 19, 20, 21, 22, 23], #DIECI E
-       "m15": [83, 88, 89, 90, 91, 92, 93, 94, 95], #QUINDICI
-       "m20": [108, 109, 110, 111, 112], #VENTI
-       "m25": [108, 109, 110, 111, 112, 114, 115, 116, 117, 118, 119], #VENTI & CINQUE
-       "m30": [102, 103, 104, 105, 106, 107], #TRENTA
-       "m35": [102, 103, 104, 105, 106, 107, 114, 115, 116, 117, 118, 119],#TRENTA & CINQUE
-       "m40": [84, 85, 86, 87, 108, 109, 110, 111, 112], #MENO VENTI
-       "m45": [84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95], #MENO QUINDICI
-       "m50": [84, 85, 86, 87, 96, 97, 98, 99, 100], #MENO DIECI
-       "m55": [84, 85, 86, 87, 114, 115, 116, 117, 118, 119], #MENO CINQUE
-       "h01": [0, 6, 7, 13, 14, 15], #È L'UNA
-       "h02": [1, 2, 3, 4, 7, 8, 16, 17, 18], #SONO LE DUE
-       "h03": [1, 2, 3, 4, 7, 8, 36, 37, 38], #SONO LE TRE
-       "h04": [1, 2, 3, 4, 7, 8, 72, 75, 76, 77, 78], #SONO LE QUATTRO
-       "h05": [1, 2, 3, 4, 7, 8, 24, 25, 26, 27, 28, 29], #SONO LE CINQUE
-       "h06": [1, 2, 3, 4, 7, 8, 79, 80, 81], #SONO LE SEI
-       "h07": [1, 2, 3, 4, 7, 8, 31, 32, 33, 34, 35], #SONO LE SETTE
-       "h08": [1, 2, 3, 4, 7, 8, 48, 49, 50, 51, 52], #SONO LE OTTO
-       "h09": [1, 2, 3, 4, 7, 8, 54, 55, 56, 57], #SONO LE NOVE
-       "h10": [1, 2, 3, 4, 7, 8, 96, 97, 98, 99, 100], #SONO LE DIECI
-       "h11": [1, 2, 3, 4, 7, 8, 66, 67, 68, 69, 70, 71], #SONO LE UNDICI
-       "h12": [1, 2, 3, 4, 7, 8, 60, 61, 62, 63, 64, 65], #SONO LE DODOCI
+       "m05": [84, 102, 103, 104, 105, 106, 107], #E CINQUE
+       "m10": [84, 109, 110, 111, 112, 113], #E DIECI
+       "m15": [84, 86, 87, 89, 90, 91, 92, 93, 94], #E UN QUARTO
+       "m20": [84, 96, 97, 98, 99, 100], #E VENTI
+       "m25": [84, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107], #VENTI CINQUE
+       "m30": [84, 115, 116, 117, 118, 119], #E MEZZA
+       "m35": [80, 81, 82, 83, 96, 97, 98, 99, 100, 102, 103, 104, 105, 106, 107], #MENO VENTI CINQUE
+       "m40": [80, 81, 82, 83, 96, 97, 98, 99, 100], #MENO VENTI
+       "m45": [80, 81, 82, 83, 86, 87, 89, 90, 91, 92, 93, 94], #MENO UN QUARTO
+       "m50": [80, 81, 82, 83, 109, 110, 111, 112, 113], #MENO DIECI
+       "m55": [80, 81, 82, 83, 102, 103, 104, 105, 106, 107], #MENO CINQUE
+       "h01": [12, 14, 15, 16, 17, 18], #È L'UNA
+       "h02": [0, 1, 2, 3, 5, 6, 20, 21, 22], #SONO LE DUE
+       "h03": [0, 1, 2, 3, 5, 6, 25, 26, 27], #SONO LE TRE
+       "h04": [0, 1, 2, 3, 5, 6, 60, 61, 62, 63, 64, 65, 66], #SONO LE QUATTRO
+       "h05": [0, 1, 2, 3, 5, 6, 73, 74, 75, 76, 77, 78], #SONO LE CINQUE
+       "h06": [0, 1, 2, 3, 5, 6, 69, 70, 71], #SONO LE SEI
+       "h07": [0, 1, 2, 3, 5, 6, 55, 56, 57, 58, 59], #SONO LE SETTE
+       "h08": [0, 1, 2, 3, 5, 6, 28, 29, 30, 31], #SONO LE OTTO
+       "h09": [0, 1, 2, 3, 5, 6, 32, 33, 34, 35], #SONO LE NOVE
+       "h10": [0, 1, 2, 3, 5, 6, 36, 37, 38, 39, 40], #SONO LE DIECI
+       "h11": [0, 1, 2, 3, 5, 6, 42, 43, 44, 45, 46, 47], #SONO LE UNDICI
+       "h12": [0, 1, 2, 3, 5, 6, 49, 50, 51, 52, 53, 54], #SONO LE DODOCI
        "am": [],
        "pm": []
   }
