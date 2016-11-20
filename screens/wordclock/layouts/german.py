@@ -39,7 +39,7 @@ LAYOUT = (u"ESKISTRFÜNFE" #0-12 extra "u" before each line with Extended Unicod
 #   "pm":  Wording/symbol to indicate afternoon/evening
 MAP = {
        "all": [0, 1, 3, 4, 5, 116, 117, 118], #ES IST
-       "m00": [], #UHR
+       "m00": [116, 117, 118], #UHR
        "m05": [7, 8, 9, 10, 41, 42, 43, 44],#FUNT NACH
        "m10": [13, 14, 15, 16, 41, 42, 43, 44], #ZEHN NACH
        "m15": [29, 30, 31, 32, 33, 34, 35, 41, 42, 43, 44], #VIERTEL NACH
