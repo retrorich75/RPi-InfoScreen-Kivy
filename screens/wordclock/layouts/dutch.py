@@ -1,3 +1,15 @@
+'''This is a custom layout for the RPi InfoScreen wordclock screen.
+
+    Custom layouts can be created for the screen by creating a new file in the
+    "layouts" folder.
+
+    Each layout must have the following variables:
+        LAYOUT:   The grid layout. Must be a single string.
+        MAP:      The mapping required for various times (see notes below)
+        COLS:     The number of columns required for the grid layout
+        SIZE:     The size of the individual box containing your letter.
+                  Tuple in (x, y) format.
+        FONTSIZE: Font size for the letter
 '''
 
 # Layout is a single string variable which will be looped over by the parser.
@@ -23,7 +35,7 @@ LAYOUT = ("HETGISBNUL"
 #   "pm":  Wording/symbol to indicate afternoon/evening
 MAP = {
        "all": [0, 1, 2, 4, 5], # HET IS
-       "m00": [88,89,90], # UUR
+       "m00": [87,88,89], # UUR
        "m05": [11, 12, 13, 14, 26, 27, 28, 29], #VIJF OVER
        "m10": [15, 16, 17, 18, 26, 27, 28, 29], #TIEN OVER
        "m15": [20, 21, 22, 23, 24, 26, 27, 28, 29], #KWART OVER
