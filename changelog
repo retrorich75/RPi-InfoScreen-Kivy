@@ -1,8 +1,20 @@
+v0.5 - Fifth VERSION
+
+New screens:
+- Tides by Eric Leblond aka regit https://github.com/regit
+
+New wordclock layout:
+- Dutch by Joris Mathijssen https://github.com/jorismathijssen
+
+Fixes:
+- update of server url for finlandarrivals by Karrika https://github.com/Karrika
+- correction of wordclock for French layout by Karrika https://github.com/Karrika
+
 v0.4.2 - Quick update
 
 New wordclock layouts:
-- Italian
-- German
+- Italian by Richard Parslow aka https://github.com/retrorich75
+- German by Richard Parslow aka https://github.com/retrorich75
 
 v0.4.1 Bugfix
 
