@@ -5,6 +5,12 @@ Set up:
 
 Edit the conf.json file as follows
 
+  "enabled": true,
+
 - "duration":   The number of seconds to show the photo
-- "extensions": A list of extensions that will be included when searching for photos.
+- "extensions": A list of extensions that will be included when searching for photos, ["jpg", "png"]
 - "folders":    A list of folders to search for photos (not recursive)
+            ["/home/pi/RPi-InfoScreen-Kivy-master/images",
+            "/home/pi/Desktop"
+            ]
+            
